@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Petr Melnikov](https://up.htmlacademy.ru/adaptive/29/user/2302933).
-* Наставник: `Неизвестно`.
+* Наставник: [Alisa Pepel](https://htmlacademy.ru/profile/id615601).
 
 ---
 
