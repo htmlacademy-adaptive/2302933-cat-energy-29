@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML Academy: Кэт энерджи</title>
+  <link href="./css/style.css" rel="stylesheet">
+  <base href="https://htmlacademy-adaptive.github.io/2302933-cat-energy-29/3/">
+</head>
+<body>
+<header class="page-header">
+  <div class="wrapper">
+    <a class="page-header__logo">
+      <img src="./img/logos/main-logo.svg" width="33" height="38" alt="Логотип Cat Energy.">
+      <img class="text-logo" src="./img/logos/text-logo.svg" width="101" height="18" alt="Текстовый логотип Cat Energy.">
+    </a>
+    <nav class="page-header__navigation main-navigation">
+      <button class="main-navigation__toggle" type="button" aria-label="Открыть/Закрыть меню."></button>
+      <ul class="main-navigation__list">
+        <li class="main-navigation__item">
+          <a class="main-navigation__link" href="index.html">Главная</a>
+        </li>
+        <li class="main-navigation__item">
+          <a class="main-navigation__link" href="catalog.html">Каталог продукции</a>
+        </li>
+        <li class="main-navigation__item">
+          <a class="main-navigation__link" href="#">Подбор программы</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main class="main-container">
+  <section class="form-container">
+    <div class="wrapper">
+      <h1 class="form-container__title title title--main">Подбор программы</h1>
+      <p class="form-container__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <form class="form" method="post" action="https://echo.htmlacademy.ru/">
+        <fieldset class="form__group">
+          <legend class="visually-hidden">Данные кота.</legend>
+          <label class="form__field field">
+            <span class="field__description">ИМЯ:*</span>
+            <input class="field__input" type="text" name="pet-name" placeholder="Барсик" aria-label="Введите имя кота.">
+          </label>
+          <label class="form__field field">
+            <span class="field__description">Вес (кг):*</span>
+            <input class="field__input field__input--number" type="number" name="pet-weight" placeholder="7" aria-label="Введите вес кота.">
+          </label>
+          <label class="form__field field">
+            <span class="field__description">Возраст (лет):</span>
+            <input class="field__input field__input--number" type="number" name="pet-age" placeholder="7" aria-label="Введите возраст кота.">
+          </label>
+        </fieldset>
+        <fieldset class="form__group">
+          <legend class="visually-hidden">Выбор программы.</legend>
+            <label class="form__field field">
+              <input class="field__input-radio visually-hidden" type="radio" name="program" value="weight-lose" checked>
+              <span class="field__mark field__mark--radio"></span>
+              <span class="field__description">похудение</span>
+            </label>
+            <label class="form__field field">
+              <input class="field__input-radio visually-hidden" type="radio" name="program" value="weight-gain">
+              <span class="field__mark field__mark--radio"></span>
+              <span class="field__description">Набор массы</span>
+            </label>
+            <label class="form__field field">
+              <input class="field__input-radio visually-hidden" type="radio" name="program" value="need-advice">
+              <span class="field__mark field__mark--radio"></span>
+              <span class="field__description">Не знаю (Нужен ваш совет)</span>
+            </label>
+        </fieldset>
+        <fieldset class="form__group">
+          <legend class="form__group-title">Контактные данные (владельца кота)</legend>
+          <label class="form__field field">
+            <span class="field__description">E-mail:*</span>
+            <input class="field__input field__input--has-icon field__input--has-icon-email" type="email" name="user-email" placeholder="kuklachev@gmail.com" aria-label="Введите вашу почту.">
+          </label>
+          <label class="form__field field">
+            <span class="field__description">Телефон:*</span>
+            <input class="field__input field__input--has-icon field__input--has-icon-phone" type="text" name="user-phone" placeholder="8 (960) 900-60-90" aria-label="Введите ваш телефон.">
+          </label>
+        </fieldset>
+        <fieldset class="form__group">
+          <legend class="form__group-title">Комментарий</legend>
+          <label class="form__field field">
+            <textarea class="field__input field__textarea" name="comment" placeholder="Расскажите обо всех повадках кота." aria-label="Расскажите обо всех повадках кота."></textarea>
+          </label>
+        </fieldset>
+        <fieldset class="form__group">
+          <legend class="form__group-title">Дополнительно</legend>
+            <label class="form__field field">
+              <input class="field__input-checkbox visually-hidden" type="checkbox" name="additives" value="sugar-substitute" checked>
+              <span class="field__mark field__mark--checkbox"></span>
+              <span class="field__description">сахарозаменитель</span>
+            </label>
+            <label class="form__field field">
+              <input class="field__input-checkbox visually-hidden" type="checkbox" name="additives" value="water">
+              <span class="field__mark field__mark--checkbox"></span>
+              <span class="field__description">питьевая вода</span>
+            </label>
+            <label class="form__field field">
+              <input class="field__input-checkbox visually-hidden" type="checkbox" name="additives" value="milk">
+              <span class="field__mark field__mark--checkbox"></span>
+              <span class="field__description">молоко</span>
+            </label>
+            <label class="form__field field">
+              <input class="field__input-checkbox visually-hidden" type="checkbox" name="additives" value="vitamins">
+              <span class="field__mark field__mark--checkbox"></span>
+              <span class="field__description">витамины</span>
+            </label>
+        </fieldset>
+        <button class="form__button button button--main" type="submit">отправить заявку</button>
+        <span class="form__text">* — Обязательные поля</span>
+      </form>
+    </div>
+  </section>
+  <section class="address">
+    <div class="wrapper">
+      <div class="address__container">
+        <h2 class="address__title">приглашаем к сотрудничеству дилеров!</h2>
+        <address class="address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+      </div>
+    </div>
+    <div class="address__map map"></div>
+  </section>
+</main>
+<footer class="page-footer">
+  <div class="wrapper">
+    <a class="page-footer__logo" href="#">
+      <img class="text-logo" src="./img/logos/text-logo.svg" width="101" height="18" alt="Текстовый логотип Cat Energy.">
+    </a>
+    <ul class="page-footer__socials socials">
+      <li class="socials__item">
+        <a class="socials__link socials__link--vkontakte" href="#" aria-label="Мы во вконтакте." target="_blank"></a>
+      </li>
+      <li class="socials__item">
+        <a class="socials__link socials__link--youtube" href="#" aria-label="Мы на ютубе." target="_blank"></a>
+      </li>
+      <li class="socials__item">
+        <a class="socials__link socials__link--telegram" href="#" aria-label="Мы в телеграмме" target="_blank"></a>
+      </li>
+    </ul>
+    <a class="page-footer__htmlacademy" href="#" target="_blank">
+      HTML Academy
+      <img src="./img/logos/htmlacademy.svg" width="27" height="34" alt="Логотип htmlacademy.">
+    </a>
+  </div>
+</footer>
+</body>
+</html>
