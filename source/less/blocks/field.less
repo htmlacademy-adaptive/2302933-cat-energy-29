@@ -1,0 +1,58 @@
+//ПОЛЕ ИНПУТА
+
+.field {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.field__description {
+  font-family: @font-family-extra;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: @color-dark-grey;
+}
+
+.field__input {
+  flex-grow: 1;
+  border: 1px solid @color-extra-grey;
+  padding: 13px 14px 12px 14px;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: @font-family-extra;
+  text-transform: uppercase;
+  color: @color-dark-grey;
+}
+
+.field__input--has-icon {
+  padding-right: 40px;
+  background-repeat: no-repeat;
+  background-position: top 12px right 11px;
+}
+
+.field__input--has-icon-email {
+  background-image: url("../../img/icons/email.svg");
+}
+
+.field__input--has-icon-phone {
+  background-image: url("../../img/icons/phone.svg");
+}
+
+.field__input--number {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.field__input--number::-webkit-outer-spin-button,
+.field__input--number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.field__textarea {
+  resize: none;
+  width: 280px;
+  height: 150px;
+}
