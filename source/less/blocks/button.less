@@ -3,16 +3,22 @@
 .button {
   cursor: pointer;
   border: none;
-}
 
-.button--main {
-  display: block;
-  text-align: center;
-  padding: 11px 0;
-  background-color: @color-basic-green;
-  font-family: @font-family-extra;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
-  color: @color-white;
+  &--main {
+    display: block;
+    text-align: center;
+    padding: 11px 0;
+    background-color: @color-basic-green;
+    font-family: @font-family-extra;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: @color-white;
+
+    @media (min-width: @tablet-width) {
+      padding: 14px 0;
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
 }
