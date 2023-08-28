@@ -1,6 +1,20 @@
 //БЛОК ПРЕИМУЩЕСТВ
 
 .advantages {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   padding: 10px 20px 10px 20px;
   background-color: @color-white;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px 25px 30px;
+    gap: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 82px 110px 30px 110px;
+    gap: 80px;
+    flex-direction: row;
+  }
 }

@@ -1,39 +1,97 @@
 //КАРТОЧКА ПРЕИМУЩЕСТВ
 
 .advantage-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 30px 33px 18px 20px;
   background-color: @color-basic-grey;
   background-repeat: no-repeat;
   background-position: top 24px left 13px;
-}
 
-.advantage-card--weight-lose {
-  background-image: url("../../img/advantages/cat.svg");
-}
+  @media (min-width: @tablet-width) {
+    padding: 77px 316px 53px 52px;
+  }
 
-.advantage-card--weight-gain {
-  background-image: url("../../img/advantages/gepard.svg");
+  @media (min-width: @desktop-width) {
+    padding: 77px 61px 55px 52px;
+  }
+
+  &--weight-lose {
+    background-image: url("../img/advantages/cat.svg");
+
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/advantages/cat-large.svg");
+      background-position: top 81px right 63px;
+    }
+    @media (min-width: @desktop-width) {
+      background-image: url("../img/advantages/cat-medium.svg");
+      background-position: top 41px left 52px;
+    }
+  }
+
+  &--weight-gain {
+    background-image: url("../img/advantages/gepard.svg");
+
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/advantages/gepard-large.svg");
+      background-position: top 91px right 29px;
+    }
+
+    @media (min-width: @desktop-width) {
+      background-image: url("../img/advantages/gepard-medium.svg");
+      background-position: top 47px left 33px;
+    }
+  }
 }
 
 .advantage-card__title {
   margin: 0 0 29px 0;
   padding-left: 70px;
   font-family: @font-family-extra;
+  font-weight: 400;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 162px;
+    margin-bottom: 73px;
+  }
 }
 
 .advantage-card__description {
   margin: 0 0 38px 0;
   color: @color-dark-grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    color: @color-black;
+    margin-bottom: 48px;
+  }
 }
 
 .advantage-card__link {
-  padding: 4px 47px 4px 0;
+  padding: 4px 57px 4px 0;
   font-family: @font-family-extra;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
   color: @color-black;
+  background-image: url("../img/icons/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: center right;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
