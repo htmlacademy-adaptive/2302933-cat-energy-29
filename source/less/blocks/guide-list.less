@@ -1,36 +1,89 @@
 //СПИСОК ГАЙДА
 
 .guide-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  .list-reset();
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  counter-reset: section;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 37px 153px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    gap: 79px;
+    flex-direction: row;
+  }
+}
+
+.guide-list__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 40px 26px 57px 0;
+    flex-direction: column;
+    gap: 31px;
+    align-items: flex-start;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+      counter-increment: section;
+      content: counters(section, "");
+      font-family: @font-family-extra;
+      font-size: 280px;
+      line-height: 280px;
+      color: @color-basic-grey;
+    }
+  }
 }
 
 .guide-list__item-icon {
+  flex-shrink: 0;
   width: 60px;
   height: 60px;
   background-color: @color-basic-green;
   background-repeat: no-repeat;
   background-position: center;
-}
 
-.guide-list__item-icon--leaf {
-  background-image: url("../../img/icons/leaf.svg");
-}
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+  }
 
-.guide-list__item-icon--powder {
-  background-image: url("../../img/icons/powder.svg");
-}
+  &--leaf {
+    background-image: url("../img/icons/leaf.svg");
+  }
 
-.guide-list__item-icon--eat {
-  background-image: url("../../img/icons/eat.svg");
-}
+  &--powder {
+    background-image: url("../img/icons/powder.svg");
+  }
 
-.guide-list__item-icon--time {
-  background-image: url("../../img/icons/clock.svg");
+  &--eat {
+    background-image: url("../img/icons/eat.svg");
+  }
+
+  &--time {
+    background-image: url("../img/icons/clock.svg");
+  }
 }
 
 .guide-list__item-description {
   margin: 0;
   color: @color-dark-grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

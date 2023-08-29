@@ -1,3 +1,5 @@
+//ЗАГОЛОВКИ
+
 .title {
   margin: 0;
   font-family: @font-family-extra;
@@ -8,6 +10,11 @@
 .title--main {
   color: @color-black;
   line-height: 40px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .title--extra {

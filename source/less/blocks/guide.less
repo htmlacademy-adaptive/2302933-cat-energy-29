@@ -3,8 +3,20 @@
 .guide {
   padding: 10px 20px 49px 20px;
   background-color: @color-white;
+
+  @media (min-width: @tablet-width) {
+    padding: 20px 30px 47px 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 40px 110px 40px 110px;
+  }
 }
 
 .guide__title {
   margin-bottom: 42px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 32px;
+  }
 }
