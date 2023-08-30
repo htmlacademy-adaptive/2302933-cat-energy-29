@@ -1,33 +1,152 @@
 //БЛОК ПРИМЕРА
 
 .example {
+  background-color: @color-light-grey;
+
+  @media (min-width: @tablet-width) {
+    background: linear-gradient(@color-white 619px, @color-light-grey 619px 100%);
+  }
+
+  @media (min-width: @desktop-width) {
+    background: linear-gradient(@color-white 165px, @color-light-grey 165px 100%);
+  }
+}
+
+.example__wrapper {
+  display: flex;
+  flex-direction: column;
   padding: 25px 20px 40px 20px;
-  background-color: @color-basic-grey;
+
+  @media (min-width: @tablet-width) {
+    padding: 45px 30px 101px 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 29px 110px 75px 110px;
+    flex-direction: row;
+    gap: 224px;
+  }
+}
+
+.example__body {
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 99px;
+  }
 }
 
 .example__title {
   margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 146px;
+  }
 }
 
 .example__description {
   margin: 0 0 20px 0;
   color: @color-dark-grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 55px;
+  }
+}
+
+.example__inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    gap: 55px;
+    justify-content: flex-start;
+  }
+}
+
+.example__container {
+  display: flex;
+  gap: 32px;
+
+  @media (min-width: @tablet-width) {
+    gap: 43px;
+  }
+}
+
+.example__inner-container {
+  min-width: 124px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 162px;
+    gap: 11px;
+  }
 }
 
 .example__subject {
   font-family: @font-family-extra;
   font-size: 24px;
   line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .example__caption {
+  max-width: 80px;
+  text-align: center;
   font-size: 12px;
   line-height: 12px;
   color: @color-dark-grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+    max-width: none;
+  }
+}
+
+.example__text-container {
+  display: flex;
+  gap: 4px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 9px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    gap: 63px;
+  }
 }
 
 .example__costs {
   font-family: @font-family-extra;
   line-height: 20px;
-  margin-bottom: 20px;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+  }
 }
