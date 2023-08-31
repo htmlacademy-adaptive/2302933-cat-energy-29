@@ -3,16 +3,16 @@
 .button {
   cursor: pointer;
   border: none;
+  padding: 10px 0;
+  font-family: @font-family-extra;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
 
   &--main {
-    display: block;
-    text-align: center;
-    padding: 11px 0;
     background-color: @color-basic-green;
-    font-family: @font-family-extra;
     font-size: 14px;
     line-height: 18px;
-    text-transform: uppercase;
     color: @color-white;
 
     @media (min-width: @tablet-width) {
@@ -20,5 +20,19 @@
       font-size: 20px;
       line-height: 26px;
     }
+  }
+
+  &--product {
+    font-size: 16px;
+    line-height: 20px;
+    background-color: @color-basic-green;
+    color: @color-white;
+  }
+
+  &--show-more {
+    font-size: 16px;
+    line-height: 20px;
+    background-color: @color-basic-grey;
+    color: @color-dark-grey;
   }
 }
