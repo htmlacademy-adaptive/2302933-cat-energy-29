@@ -11,6 +11,11 @@
   font-size: 16px;
   text-transform: uppercase;
   color: @color-dark-grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .field__input {
@@ -22,37 +27,45 @@
   font-family: @font-family-extra;
   text-transform: uppercase;
   color: @color-dark-grey;
-}
 
-.field__input--has-icon {
-  padding-right: 40px;
-  background-repeat: no-repeat;
-  background-position: top 12px right 11px;
-}
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 
-.field__input--has-icon-email {
-  background-image: url("../../img/icons/email.svg");
-}
+  &--has-icon {
+    padding-right: 40px;
+    background-repeat: no-repeat;
+    background-position: top 12px right 11px;
 
-.field__input--has-icon-phone {
-  background-image: url("../../img/icons/phone.svg");
-}
+    &-email {
+      background-image: url("../../img/icons/email.svg");
+    }
 
-.field__input--number {
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  appearance: textfield;
-}
+    &-phone {
+      background-image: url("../../img/icons/phone.svg");
+    }
+  }
 
-.field__input--number::-webkit-outer-spin-button,
-.field__input--number::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  appearance: none;
-  margin: 0;
+  &--number {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      appearance: none;
+      margin: 0;
+    }
+  }
 }
 
 .field__textarea {
   resize: none;
-  width: 280px;
   height: 150px;
+
+  @media (min-width: @tablet-width) {
+    height: 175px;
+  }
 }

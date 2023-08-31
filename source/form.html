@@ -30,11 +30,11 @@
   </nav>
 </header>
 <main class="main-container">
-  <section class="form-container">
-    <div class="wrapper">
-      <h1 class="form-container__title title title--main">Подбор программы</h1>
-      <p class="form-container__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-      <form class="form" method="post" action="https://echo.htmlacademy.ru/">
+  <section class="form-container wrapper">
+    <h1 class="form-container__title title title--main">Подбор программы</h1>
+    <p class="form-container__description">Заполните анкету, и мы подберем программу&nbsp;питания для вашего кота</p>
+    <form class="form" method="post" action="https://echo.htmlacademy.ru/">
+      <div class="form__group-wrapper">
         <fieldset class="form__group">
           <legend class="visually-hidden">Данные кота.</legend>
           <label class="form__field field">
@@ -50,7 +50,7 @@
             <input class="field__input field__input--number" type="number" name="pet-age" placeholder="7" aria-label="Введите возраст кота.">
           </label>
         </fieldset>
-        <fieldset class="form__group">
+        <fieldset class="form__group form__group--radio">
           <legend class="visually-hidden">Выбор программы.</legend>
             <label class="form__field field">
               <input class="field__input-radio visually-hidden" type="radio" name="program" value="weight-lose" checked>
@@ -68,50 +68,52 @@
               <span class="field__description">Не знаю (Нужен ваш совет)</span>
             </label>
         </fieldset>
-        <fieldset class="form__group">
-          <legend class="form__group-title">Контактные данные (владельца кота)</legend>
+      </div>
+      <fieldset class="form__group form__group--user">
+        <legend class="form__group-title">Контактные данные (владельца кота)</legend>
+        <label class="form__field field">
+          <span class="field__description">E-mail:*</span>
+          <input class="field__input field__input--has-icon field__input--has-icon-email" type="email" name="user-email" placeholder="kuklachev@gmail.com" aria-label="Введите вашу почту.">
+        </label>
+        <label class="form__field field">
+          <span class="field__description">Телефон:*</span>
+          <input class="field__input field__input--has-icon field__input--has-icon-phone" type="text" name="user-phone" placeholder="8 (960) 900-60-90" aria-label="Введите ваш телефон.">
+        </label>
+      </fieldset>
+      <fieldset class="form__group">
+        <legend class="form__group-title">Комментарий</legend>
+        <label class="form__field field">
+          <textarea class="field__input field__textarea" name="comment" placeholder="Расскажите обо всех повадках кота." aria-label="Расскажите обо всех повадках кота."></textarea>
+        </label>
+      </fieldset>
+      <fieldset class="form__group form__group--checkbox">
+        <legend class="form__group-title">Дополнительно</legend>
           <label class="form__field field">
-            <span class="field__description">E-mail:*</span>
-            <input class="field__input field__input--has-icon field__input--has-icon-email" type="email" name="user-email" placeholder="kuklachev@gmail.com" aria-label="Введите вашу почту.">
+            <input class="field__input-checkbox visually-hidden" type="checkbox" name="additives" value="sugar-substitute" checked>
+            <span class="field__mark field__mark--checkbox"></span>
+            <span class="field__description">сахарозаменитель</span>
           </label>
           <label class="form__field field">
-            <span class="field__description">Телефон:*</span>
-            <input class="field__input field__input--has-icon field__input--has-icon-phone" type="text" name="user-phone" placeholder="8 (960) 900-60-90" aria-label="Введите ваш телефон.">
+            <input class="field__input-checkbox visually-hidden" type="checkbox" name="additives" value="water">
+            <span class="field__mark field__mark--checkbox"></span>
+            <span class="field__description">питьевая вода</span>
           </label>
-        </fieldset>
-        <fieldset class="form__group">
-          <legend class="form__group-title">Комментарий</legend>
           <label class="form__field field">
-            <textarea class="field__input field__textarea" name="comment" placeholder="Расскажите обо всех повадках кота." aria-label="Расскажите обо всех повадках кота."></textarea>
+            <input class="field__input-checkbox visually-hidden" type="checkbox" name="additives" value="milk">
+            <span class="field__mark field__mark--checkbox"></span>
+            <span class="field__description">молоко</span>
           </label>
-        </fieldset>
-        <fieldset class="form__group">
-          <legend class="form__group-title">Дополнительно</legend>
-            <label class="form__field field">
-              <input class="field__input-checkbox visually-hidden" type="checkbox" name="additives" value="sugar-substitute" checked>
-              <span class="field__mark field__mark--checkbox"></span>
-              <span class="field__description">сахарозаменитель</span>
-            </label>
-            <label class="form__field field">
-              <input class="field__input-checkbox visually-hidden" type="checkbox" name="additives" value="water">
-              <span class="field__mark field__mark--checkbox"></span>
-              <span class="field__description">питьевая вода</span>
-            </label>
-            <label class="form__field field">
-              <input class="field__input-checkbox visually-hidden" type="checkbox" name="additives" value="milk">
-              <span class="field__mark field__mark--checkbox"></span>
-              <span class="field__description">молоко</span>
-            </label>
-            <label class="form__field field">
-              <input class="field__input-checkbox visually-hidden" type="checkbox" name="additives" value="vitamins">
-              <span class="field__mark field__mark--checkbox"></span>
-              <span class="field__description">витамины</span>
-            </label>
-        </fieldset>
+          <label class="form__field field">
+            <input class="field__input-checkbox visually-hidden" type="checkbox" name="additives" value="vitamins">
+            <span class="field__mark field__mark--checkbox"></span>
+            <span class="field__description">витамины</span>
+          </label>
+      </fieldset>
+      <div class="form__container">
         <button class="form__button button button--main" type="submit">отправить заявку</button>
         <span class="form__text">* — Обязательные поля</span>
-      </form>
-    </div>
+      </div>
+    </form>
   </section>
   <section class="address">
     <div class="address__wrapper wrapper">
