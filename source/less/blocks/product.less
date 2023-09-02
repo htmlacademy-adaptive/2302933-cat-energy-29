@@ -2,6 +2,20 @@
 
 .product {
   position: relative;
+  z-index: 1;
+
+  @media (min-width: @tablet-width) {
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: calc(100% - 81px);
+      z-index: -1;
+    }
+  }
 
   &--main {
     padding: 20px 0 25px;
@@ -13,6 +27,10 @@
       padding: 29px 37px 40px 37px;
       grid-template-columns: 1fr;
       gap: 0;
+
+      &::before {
+        background-color: @color-basic-grey;
+      }
     }
 
     @media (min-width: @desktop-width) {
@@ -31,8 +49,12 @@
 
     @media (min-width: @tablet-width) {
       padding: 241px 20px 40px 20px;
-      background-image: url("../img/icons/plus-medium.svg");
-      background-position: top 50px center;
+      background-size: 60px 60px;
+      background-position: top 132px center;
+
+      &::before {
+        border: 2px solid @color-basic-grey;
+      }
     }
   }
 }
