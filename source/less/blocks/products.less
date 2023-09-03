@@ -3,15 +3,36 @@
 .products {
   padding: 27px 20px;
   background-color: @color-white;
+
+  @media (min-width: @tablet-width) {
+    padding: 40px 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 45px 110px 36px;
+  }
 }
 
 .products__title {
   margin-bottom: 41px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 84px;
+  }
 }
 
 .products__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+  .list-reset();
+  display: grid;
+  grid-template-columns: 1fr;
 
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 63px 80px;
+  }
+}

@@ -1,13 +1,64 @@
 //БЛОК ФОРМЫ
 
 .form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 
+.form__group-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+
+  @media (min-width: @tablet-width) {
+    gap: 72px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
 }
 
 .form__group {
   padding: 0;
   margin: 0;
   border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  &--user {
+
+    @media (min-width: @desktop-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+    }
+  }
+
+  &--radio {
+
+    @media (min-width: @tablet-width) {
+      padding: 23px 27px 27px;
+      border: 1px solid @color-extra-grey;
+    }
+  }
+
+  &--checkbox {
+
+    @media (min-width: @tablet-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px 123px;
+    }
+
+    @media (min-width: @desktop-width) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
 }
 
 .form__group-title {
@@ -15,8 +66,45 @@
   color: @color-black;
   font-size: 24px;
   line-height: 26px;
+  margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.form__container {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    gap: 64px;
+  }
+
+  @media (min-width: @desktop-width) {
+    gap: 80px;
+  }
+}
+
+.form__button {
+
+  @media (min-width: @tablet-width) {
+    width: 282px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width:  570px;
+  }
 }
 
 .form__text {
+  align-self: center;
   line-height: 16px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+  }
 }

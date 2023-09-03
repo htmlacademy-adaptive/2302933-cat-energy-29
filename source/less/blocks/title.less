@@ -1,17 +1,29 @@
+//ЗАГОЛОВКИ
+
 .title {
   margin: 0;
   font-family: @font-family-extra;
+  font-weight: 400;
   font-size: 36px;
 }
 
 .title--main {
   color: @color-black;
   line-height: 40px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .title--extra {
   color: @color-white;
   line-height: 36px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    color: @color-black;
+  }
 }
-
-

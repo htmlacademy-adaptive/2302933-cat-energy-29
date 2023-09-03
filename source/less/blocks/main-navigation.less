@@ -1,19 +1,37 @@
-.main-navigation {
-
-}
+//ОСНОВНАЯ НАВИГАЦИЯ
 
 .main-navigation__toggle {
-  width: 18px;
-  height: 18px;
+  display: block;
+  width: 24px;
+  height: 24px;
   border: none;
   padding: 0;
   background-color: @color-white;
+  background-image: url("../img/icons/hamburger-menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .main-navigation__list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+  .list-reset();
+  display: none;
+  position: absolute;
+  top: 65px;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  background-color: @color-white;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    top: 0;
+    display: flex;
+    gap: 33px;
+  }
 }
 
 .main-navigation__link {
@@ -25,4 +43,19 @@
   text-transform: uppercase;
   color: @color-black;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+
+    &--has-background {
+      color: @color-white;
+    }
+  }
 }

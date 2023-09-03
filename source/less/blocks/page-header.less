@@ -1,4 +1,28 @@
+//ШАПКА САЙТА
+
 .page-header {
-  padding: 13px 20px 14px 20px;
   background-color: @color-white;
+  padding: 13px 20px 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    padding: 25px 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 55px 110px 29px 110px;
+  }
+}
+
+.page-header__logo {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+
+  @media (min-width: @tablet-width) {
+    gap: 13px;
+  }
 }

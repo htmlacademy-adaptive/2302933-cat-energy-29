@@ -1,0 +1,83 @@
+//ДОПОЛНИТЕЛЬНЫЕ ТОВАРЫ
+
+.extra-product {
+  padding: 13px 0 19px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  @media (min-width: @tablet-width) {
+    padding: 26px 38px 28px 38px;
+    gap: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 15px 0 17px;
+    flex-direction: row;
+    gap: 40px;
+  }
+}
+
+.extra-product__container {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-grow: 1;
+  }
+}
+
+.extra-product__title {
+  font-family: @font-family-extra;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.extra-product__details {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  line-height: 14px;
+  color: @color-dark-grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    justify-content: normal;
+    gap: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: space-between;
+    flex-grow: 1;
+    max-width: 285px;
+  }
+}
+
+.extra-product__details dd {
+  margin: 0;
+
+  @media (min-width: @desktop-width) {
+    min-width: 42px;
+  }
+}
+
+.extra-product__button {
+
+  @media (min-width: @desktop-width) {
+    width: 244px;
+  }
+}
