@@ -40,6 +40,15 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 20px 56px;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @media (min-width: @tablet-width) {
     gap: 13px;
