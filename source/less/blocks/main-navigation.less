@@ -73,12 +73,17 @@
   text-transform: uppercase;
   color: @color-black;
   text-align: center;
+  transition: opacity 0.3s ease;
 
   &--active {
 
     @media (min-width: @tablet-width) {
       border-bottom: 2px solid @color-basic-green;
     }
+  }
+
+  &--active.main-navigation__link--has-background {
+    border-bottom-color: @color-white;
   }
 
   @media (min-width: @tablet-width) {
@@ -94,5 +99,13 @@
     &--has-background {
       color: @color-white;
     }
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
