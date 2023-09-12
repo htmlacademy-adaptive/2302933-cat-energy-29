@@ -21,6 +21,18 @@
   @media (min-width: @desktop-width) {
     padding: 110px 190px 266px;
   }
+
+  &::before {
+    @media (min-width: @desktop-width) {
+      content: "";
+      width: 720px;
+      height: 684px;
+      position: absolute;
+      right: 0;
+      top: -136px;
+      background-image: url("../img/promo/promo-background-desktop.png");
+    }
+  }
 }
 
 .promo__title {
