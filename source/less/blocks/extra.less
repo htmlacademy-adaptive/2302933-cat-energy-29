@@ -47,6 +47,24 @@
   }
 }
 
+.extra__item {
+  border-top: 1px solid @color-special-grey;
+
+  &:last-child {
+    border-bottom: 1px solid @color-special-grey;
+  }
+
+  @media (min-width: @tablet-width) {
+    border-left: 1px solid @color-special-grey;
+    border-right: 1px solid @color-special-grey;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-right: none;
+    border-left: none;
+  }
+}
+
 .extra__present {
   padding: 187px 61px 43px 58px;
   background-image: url("../img/icons/gift.svg"), url("../img/extra/cat-in-bag.png");
