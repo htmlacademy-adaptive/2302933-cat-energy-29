@@ -54,6 +54,8 @@
 }
 
 .address__text {
+  display: flex;
+  flex-direction: column;
   font-style: normal;
   line-height: 20px;
   color: @color-dark-grey;
@@ -61,6 +63,11 @@
   @media (min-width: @tablet-width) {
     font-size: 16px;
     text-align: right;
+    gap: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
   }
 }
 
