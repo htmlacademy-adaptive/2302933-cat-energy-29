@@ -3,6 +3,21 @@
 .compare-slider {
   align-self: center;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    align-self: normal;
+  }
+}
+
+.compare-slider__image {
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    width: 560px;
+    height: 512px;
+    max-width: none;
+    margin: 0 auto;
+  }
 }
 
 .compare-slider__button {
