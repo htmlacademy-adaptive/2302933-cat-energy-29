@@ -36,7 +36,11 @@
   <section class="promo wrapper">
     <h1 class="promo__title title title--extra">Функциональное питание для&nbsp;котов</h1>
     <p class="promo__description">Занялся собой? Займись котом!</p>
-    <img class="promo__image" src="./img/promo/product.png" width="280" height="270" alt="Питание Cat Energy Pro.">
+    <picture>
+      <source media="(min-width: 1440px)" srcset="./img/promo/product-desktop.png 1x, ./img/promo/product-desktop@2x.png 2x">
+      <source media="(min-width: 768px)" srcset="./img/promo/product-tablet.jpg 1x, ./img/promo/product-tablet@2x.jpg 2x">
+      <img class="promo__image" src="./img/promo/product-mobile.png" srcset="./img/promo/product-mobile@2x.png 2x" width="280" height="270" alt="Питание Cat Energy Pro.">
+    </picture>
     <a class="promo__link button button--main" href="form.html">Подобрать программу</a>
   </section>
   <section class="advantages wrapper">
