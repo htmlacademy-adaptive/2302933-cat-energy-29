@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>HTML Academy: Кэт энерджи</title>
   <link href="./css/style.css" rel="stylesheet">
 </head>
 <body>
-<header class="page-header wrapper">
+<header class="page-header page-header--nojs wrapper page-header--border-bottom">
   <a class="page-header__logo" href="index.html">
     <img src="./img/logos/main-logo.svg" width="33" height="38" alt="Логотип Cat Energy.">
     <img class="text-logo" src="./img/logos/text-logo.svg" width="101" height="18" alt="Текстовый логотип Cat Energy.">
   </a>
   <nav class="page-header__navigation main-navigation">
-    <button class="main-navigation__toggle" type="button" aria-label="Открыть/Закрыть меню."></button>
-    <ul class="main-navigation__list">
+    <button class="main-navigation__toggle main-navigation__toggle--default" type="button" aria-label="Открыть/Закрыть меню."></button>
+    <ul class="main-navigation__list main-navigation__list--closed">
       <li class="main-navigation__item">
         <a class="main-navigation__link" href="index.html">Главная</a>
       </li>
@@ -24,7 +23,7 @@
         <a class="main-navigation__link" href="catalog.html">Каталог продукции</a>
       </li>
       <li class="main-navigation__item">
-        <a class="main-navigation__link" href="#">Подбор программы</a>
+        <a class="main-navigation__link main-navigation__link--active" href="#">Подбор программы</a>
       </li>
     </ul>
   </nav>
@@ -50,7 +49,7 @@
             <input class="field__input field__input--number" type="number" name="pet-age" placeholder="7" aria-label="Введите возраст кота.">
           </label>
         </fieldset>
-        <fieldset class="form__group form__group--radio">
+        <fieldset class="form__group form__group--radio decorative-line decorative-line--bottom decorative-line--top">
           <legend class="visually-hidden">Выбор программы.</legend>
             <label class="form__field field">
               <input class="field__input-radio visually-hidden" type="radio" name="program" value="weight-lose" checked>
@@ -70,7 +69,9 @@
         </fieldset>
       </div>
       <fieldset class="form__group form__group--user">
-        <legend class="form__group-title">Контактные данные (владельца кота)</legend>
+        <legend class="form__group-title decorative-title">
+          <span class="decorative-title__text decorative-title__text--form">Контактные данные (владельца кота)</span>
+        </legend>
         <label class="form__field field">
           <span class="field__description">E-mail:*</span>
           <input class="field__input field__input--has-icon field__input--has-icon-email" type="email" name="user-email" placeholder="kuklachev@gmail.com" aria-label="Введите вашу почту.">
@@ -81,33 +82,37 @@
         </label>
       </fieldset>
       <fieldset class="form__group">
-        <legend class="form__group-title">Комментарий</legend>
+        <legend class="form__group-title decorative-title">
+          <span class="decorative-title__text">Комментарий</span>
+        </legend>
         <label class="form__field field">
           <textarea class="field__input field__textarea" name="comment" placeholder="Расскажите обо всех повадках кота." aria-label="Расскажите обо всех повадках кота."></textarea>
         </label>
       </fieldset>
       <fieldset class="form__group form__group--checkbox">
-        <legend class="form__group-title">Дополнительно</legend>
-          <label class="form__field field">
-            <input class="field__input-checkbox visually-hidden" type="checkbox" name="additives" value="sugar-substitute" checked>
-            <span class="field__mark field__mark--checkbox"></span>
-            <span class="field__description">сахарозаменитель</span>
-          </label>
-          <label class="form__field field">
-            <input class="field__input-checkbox visually-hidden" type="checkbox" name="additives" value="water">
-            <span class="field__mark field__mark--checkbox"></span>
-            <span class="field__description">питьевая вода</span>
-          </label>
-          <label class="form__field field">
-            <input class="field__input-checkbox visually-hidden" type="checkbox" name="additives" value="milk">
-            <span class="field__mark field__mark--checkbox"></span>
-            <span class="field__description">молоко</span>
-          </label>
-          <label class="form__field field">
-            <input class="field__input-checkbox visually-hidden" type="checkbox" name="additives" value="vitamins">
-            <span class="field__mark field__mark--checkbox"></span>
-            <span class="field__description">витамины</span>
-          </label>
+        <legend class="form__group-title decorative-title">
+          <span class="decorative-title__text">Дополнительно</span>
+        </legend>
+        <label class="form__field field">
+          <input class="field__input-checkbox visually-hidden" type="checkbox" name="additives" value="sugar-substitute" checked>
+          <span class="field__mark field__mark--checkbox"></span>
+          <span class="field__description">сахарозаменитель</span>
+        </label>
+        <label class="form__field field">
+          <input class="field__input-checkbox visually-hidden" type="checkbox" name="additives" value="water">
+          <span class="field__mark field__mark--checkbox"></span>
+          <span class="field__description">питьевая вода</span>
+        </label>
+        <label class="form__field field">
+          <input class="field__input-checkbox visually-hidden" type="checkbox" name="additives" value="milk">
+          <span class="field__mark field__mark--checkbox"></span>
+          <span class="field__description">молоко</span>
+        </label>
+        <label class="form__field field">
+          <input class="field__input-checkbox visually-hidden" type="checkbox" name="additives" value="vitamins">
+          <span class="field__mark field__mark--checkbox"></span>
+          <span class="field__description">витамины</span>
+        </label>
       </fieldset>
       <div class="form__container">
         <button class="form__button button button--main" type="submit">отправить заявку</button>
@@ -119,10 +124,13 @@
     <div class="address__wrapper wrapper">
       <div class="address__container address__container--extra">
         <h2 class="address__title">приглашаем к&nbsp;сотрудничеству дилеров!</h2>
-        <address class="address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        <address class="address__text">
+          <span>ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8</span>
+          <span>Санкт-Петербург</span>
+        </address>
       </div>
     </div>
-    <div class="address__map map"></div>
+    <iframe class="address__map map" src="https://yandex.ru/map-widget/v1/?ll=30.325491%2C59.936296&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzM5NDE4NBJh0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQu9C40YbQsCwgMTkvOCIKDZaV8kEVKcFvQg%2C%2C&tab=services&z=15.51" title="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург."></iframe>
   </section>
 </main>
 <footer class="page-footer">
@@ -147,5 +155,6 @@
     </a>
   </div>
 </footer>
+<script src="./js/script.js"></script>
 </body>
 </html>

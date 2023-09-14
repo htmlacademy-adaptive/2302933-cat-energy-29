@@ -1,0 +1,42 @@
+//ДЕКОРАТИВНЫЙ ЗАГОЛОВОК
+
+.decorative-title {
+  width: 100%;
+  position: relative;
+
+  &::before {
+    content: "";
+    height: 15px;
+    border-bottom: 2px solid @color-basic-green;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+
+    @media (min-width: @tablet-width) {
+      height: 22px;
+    }
+  }
+}
+
+.decorative-title__text {
+  display: inline-block;
+  padding: 0 20px;
+  margin-left: -22px;
+  position: relative;
+  background-color: @color-white;
+  z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 40px;
+    margin-left: -40px;
+  }
+
+  &--form {
+    max-width: 222px;
+
+    @media (min-width: @tablet-width) {
+      max-width: none;
+    }
+  }
+}

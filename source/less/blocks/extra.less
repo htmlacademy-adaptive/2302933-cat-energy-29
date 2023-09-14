@@ -13,7 +13,6 @@
 }
 
 .extra__container {
-
   @media (min-width: @desktop-width) {
     display: flex;
     gap: 81px;
@@ -48,18 +47,34 @@
   }
 }
 
+.extra__item {
+  border-top: 1px solid @color-special-grey;
+
+  &:last-child {
+    border-bottom: 1px solid @color-special-grey;
+  }
+
+  @media (min-width: @tablet-width) {
+    border-left: 1px solid @color-special-grey;
+    border-right: 1px solid @color-special-grey;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-right: none;
+    border-left: none;
+  }
+}
+
 .extra__present {
   padding: 187px 61px 43px 58px;
-  background-image: url("../img/icons/gift.svg"),
-                    url("../img/extra/cat-in-bag.png");
+  background-image: url("../img/icons/gift.svg"), url("../img/extra/cat-in-bag.png");
   background-repeat: no-repeat;
   background-position: top 58px center, center;
   background-size: auto, cover;
 
   @media (min-width: @tablet-width) {
     padding: 71px 125px 69px 421px;
-    background-image: url("../img/icons/gift.svg"),
-                      url("../img/extra/cat-in-bag-horizontal.png");
+    background-image: url("../img/icons/gift.svg"), url("../img/extra/cat-in-bag-horizontal.png");
     background-position: top 57px left 77px, center;
   }
 

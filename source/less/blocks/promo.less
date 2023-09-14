@@ -19,7 +19,19 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 110px 80px 266px;
+    padding: 110px 190px 266px;
+  }
+
+  &::before {
+    @media (min-width: @desktop-width) {
+      content: "";
+      width: 720px;
+      height: 684px;
+      position: absolute;
+      right: 0;
+      top: -136px;
+      background-image: url("../img/promo/promo-background-desktop.png");
+    }
   }
 }
 
@@ -56,6 +68,7 @@
   margin-bottom: 3px;
 
   @media (min-width: @tablet-width) {
+    margin: 0;
     position: absolute;
     bottom: 63px;
     left: 200px;
@@ -63,7 +76,8 @@
 
   @media (min-width: @desktop-width) {
     top: 32px;
-    left: 557px;
+    left: auto;
+    right: 331px;
   }
 }
 

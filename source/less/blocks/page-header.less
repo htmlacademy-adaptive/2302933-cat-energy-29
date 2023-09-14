@@ -6,7 +6,32 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
   flex-wrap: wrap;
+
+  &--nojs {
+    @media (max-width: @mobile-width-only) {
+      flex-direction: column;
+      align-items: stretch;
+
+      .main-navigation__toggle {
+        display: none;
+      }
+
+      .main-navigation__list {
+        position: static;
+        display: block;
+      }
+    }
+  }
+
+  &--border-bottom {
+    border-bottom: 1px solid @color-special-grey-4;
+
+    @media (min-width: @tablet-width) {
+      border: none;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     padding: 25px 30px;
@@ -19,8 +44,18 @@
 
 .page-header__logo {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 56px;
+  gap: 20px 56px;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @media (min-width: @tablet-width) {
     gap: 13px;

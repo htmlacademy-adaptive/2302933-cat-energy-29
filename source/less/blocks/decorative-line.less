@@ -1,0 +1,40 @@
+//ДЕКОРАТИВНАЯ ЛИНИЯ СВЕРХУ
+
+.decorative-line {
+  position: relative;
+  width: 100%;
+
+  &--top {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      height: 1px;
+      width: 100vw;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: @color-special-grey-3;
+
+      @media (min-width: @tablet-width) {
+        display: none;
+      }
+    }
+  }
+
+  &--bottom {
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      height: 1px;
+      width: 100vw;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: @color-special-grey-3;
+
+      @media (min-width: @tablet-width) {
+        display: none;
+      }
+    }
+  }
+}

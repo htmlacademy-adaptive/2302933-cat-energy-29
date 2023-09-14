@@ -1,9 +1,20 @@
 //ПОЛЕ ИНПУТА
 
 .field {
+  cursor: pointer;
   display: flex;
   align-items: center;
   gap: 13px;
+
+  &:hover .field__mark {
+    border-color: @color-special-grey-2;
+  }
+
+  &:has(.field__input-checkbox:disabled),
+  &:has(.field__input-radio:disabled) {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
 }
 
 .field__description {
@@ -11,6 +22,7 @@
   font-size: 16px;
   text-transform: uppercase;
   color: @color-dark-grey;
+  max-width: 300px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -39,22 +51,19 @@
     background-position: top 12px right 11px;
 
     &-email {
-      background-image: url("../../img/icons/email.svg");
+      background-image: url("../img/icons/email.svg");
     }
 
     &-phone {
-      background-image: url("../../img/icons/phone.svg");
+      background-image: url("../img/icons/phone.svg");
     }
   }
 
   &--number {
-    -webkit-appearance: textfield;
-    -moz-appearance: textfield;
     appearance: textfield;
 
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
-      -webkit-appearance: none;
       appearance: none;
       margin: 0;
     }
@@ -67,5 +76,47 @@
 
   @media (min-width: @tablet-width) {
     height: 175px;
+  }
+}
+
+.field__input-radio:checked + .field__mark--radio::before {
+  content: "";
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: @color-basic-green;
+
+  @media (min-width: @tablet-width) {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.field__input-checkbox:checked + .field__mark--checkbox {
+  background-image: url("../img/icons/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: @tablet-width) {
+    background-size: 26px;
+  }
+}
+
+.field__mark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid @color-special-grey;
+  transition: border-color 0.3s ease;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+
+  &--radio {
+    border-radius: 50%;
   }
 }

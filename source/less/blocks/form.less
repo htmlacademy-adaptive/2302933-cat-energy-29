@@ -23,15 +23,13 @@
 }
 
 .form__group {
-  padding: 0;
-  margin: 0;
-  border: none;
+  .list-reset();
   display: flex;
+  border: none;
   flex-direction: column;
   gap: 14px;
 
   &--user {
-
     @media (min-width: @desktop-width) {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -40,6 +38,7 @@
   }
 
   &--radio {
+    padding: 22px 0 19px;
 
     @media (min-width: @tablet-width) {
       padding: 23px 27px 27px;
@@ -48,7 +47,6 @@
   }
 
   &--checkbox {
-
     @media (min-width: @tablet-width) {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -90,13 +88,12 @@
 }
 
 .form__button {
-
   @media (min-width: @tablet-width) {
     width: 282px;
   }
 
   @media (min-width: @desktop-width) {
-    width:  570px;
+    width: 570px;
   }
 }
 
