@@ -10,8 +10,12 @@
 <body>
 <header class="page-header page-header--nojs wrapper page-header--border-bottom">
   <a class="page-header__logo" href="index.html">
-    <img src="./img/logos/main-logo.svg" width="33" height="38" alt="Логотип Cat Energy.">
-    <img class="text-logo" src="./img/logos/text-logo.svg" width="101" height="18" alt="Текстовый логотип Cat Energy.">
+    <picture>
+      <source media="(min-width: 1440px)" srcset="./img/logos/main-logo-desktop.svg">
+      <source media="(min-width: 768px)" srcset="./img/logos/main-logo-tablet.svg">
+      <img class="page-header__logo-image" src="./img/logos/main-logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy.">
+    </picture>
+    <img class="text-logo text-logo--header" src="./img/logos/text-logo.svg" width="101" height="18" alt="Текстовый логотип Cat Energy.">
   </a>
   <nav class="page-header__navigation main-navigation">
     <button class="main-navigation__toggle main-navigation__toggle--default" type="button" aria-label="Открыть/Закрыть меню."></button>
