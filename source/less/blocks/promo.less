@@ -2,36 +2,57 @@
 
 .promo {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 27px 20px 10px 20px;
-  background-image: url("../img/promo/promo-background.jpg");
+  z-index: 1;
+  background-image: url("../img/promo/promo-background-mobile.jpg");
   background-repeat: no-repeat;
   background-position: bottom 160px center;
   background-size: cover;
   background-color: @color-white;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/promo/promo-background-mobile@2x.jpg");
+  }
+
   @media (min-width: @tablet-width) {
-    padding: 65px 120px 255px;
-    align-items: flex-start;
     background-image: none;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 110px 190px 266px;
+    z-index: 0;
   }
 
   &::before {
     @media (min-width: @desktop-width) {
       content: "";
-      width: 720px;
-      height: 684px;
+      width: 50%;
+      height: calc(100% + 143px);
       position: absolute;
       right: 0;
-      top: -136px;
-      background-image: url("../img/promo/promo-background-desktop.png");
+      top: -143px;
+      background-image: url("../img/promo/promo-background-desktop.jpg");
+      background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/promo/promo-background-desktop@2x.jpg");
+      }
     }
+  }
+}
+
+.promo__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 27px 20px 10px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 65px 120px 526px;
+    align-items: flex-start;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 81px 190px 184px;
   }
 }
 
@@ -60,7 +81,7 @@
     font-size: 20px;
     line-height: 20px;
     color: @color-black;
-    margin-bottom: 50px;
+    margin-bottom: 52px;
   }
 }
 
@@ -70,14 +91,18 @@
   @media (min-width: @tablet-width) {
     margin: 0;
     position: absolute;
-    bottom: 63px;
-    left: 200px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
   }
 
   @media (min-width: @desktop-width) {
-    top: 32px;
+    top: 0;
     left: auto;
-    right: 331px;
+    right: 332px;
+    z-index: 0;
+    transform: none;
   }
 }
 

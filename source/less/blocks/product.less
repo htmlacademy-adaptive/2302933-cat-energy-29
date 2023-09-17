@@ -47,7 +47,7 @@
     background-position: top 25px center;
 
     @media (min-width: @tablet-width) {
-      padding: 241px 20px 40px 20px;
+      padding: 232px 20px 40px 20px;
       background-size: 60px 60px;
       background-position: top 132px center;
 
@@ -74,6 +74,10 @@
   }
 }
 
+.product__image {
+  display: block;
+}
+
 .product__container {
   @media (min-width: @tablet-width) {
     display: flex;
@@ -84,7 +88,7 @@
 
   @media (min-width: @desktop-width) {
     gap: 23px;
-    margin-bottom: 42px;
+    margin-bottom: 33px;
   }
 }
 
@@ -167,6 +171,8 @@
 
     @media (min-width: @tablet-width) {
       margin-top: auto;
+      align-self: center;
+      min-width: 169px;
     }
   }
 }

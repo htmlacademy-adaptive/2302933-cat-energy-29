@@ -67,20 +67,34 @@
 
 .extra__present {
   padding: 187px 61px 43px 58px;
-  background-image: url("../img/icons/gift.svg"), url("../img/extra/cat-in-bag.png");
+  background-image: url("../img/icons/gift.svg"), url("../img/extra/cat-mobile.jpg");
   background-repeat: no-repeat;
   background-position: top 58px center, center;
   background-size: auto, cover;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/icons/gift.svg"), url("../img/extra/cat-mobile@2x.jpg");
+  }
+
   @media (min-width: @tablet-width) {
     padding: 71px 125px 69px 421px;
-    background-image: url("../img/icons/gift.svg"), url("../img/extra/cat-in-bag-horizontal.png");
+    background-image: url("../img/icons/gift.svg"), url("../img/extra/cat-tablet.jpg");
     background-position: top 57px left 77px, center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/icons/gift.svg"), url("../img/extra/cat-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
+    background-image: url("../img/icons/gift.svg"), url("../img/extra/cat-desktop.jpg");
+    background-position: top 57px center, center;
     padding: 185px 42px 43px 42px;
     max-width: 245px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/icons/gift.svg"), url("../img/extra/cat-desktop@2x.jpg");
+    }
   }
 }
 
@@ -93,6 +107,7 @@
 
   @media (min-width: @tablet-width) {
     text-align: left;
+    max-width: 165px;
   }
 
   @media (min-width: @desktop-width) {

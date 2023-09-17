@@ -4,14 +4,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Функциональное питание для котов">
+  <link rel="icon" href="./favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
   <title>HTML Academy: Кэт энерджи</title>
   <link href="./css/style.css" rel="stylesheet">
 </head>
 <body>
 <header class="page-header page-header--nojs wrapper">
   <a class="page-header__logo" href="#">
-    <img src="./img/logos/main-logo.svg" width="33" height="38" alt="Логотип Cat Energy.">
-    <img class="text-logo" src="./img/logos/text-logo.svg" width="101" height="18" alt="Текстовый логотип Cat Energy.">
+    <picture>
+      <source media="(min-width: 1440px)" srcset="./img/logos/main-logo-desktop.svg" width="70" height="59">
+      <source media="(min-width: 768px)" srcset="./img/logos/main-logo-tablet.svg" width="60" height="50">
+      <img class="page-header__logo-image" src="./img/logos/main-logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy.">
+    </picture>
+    <img class="text-logo text-logo--header" src="./img/logos/text-logo.svg" width="101" height="18" alt="Текстовый логотип Cat Energy.">
   </a>
   <nav class="page-header__navigation main-navigation">
     <button class="main-navigation__toggle main-navigation__toggle--default" type="button" aria-label="Открыть/Закрыть меню."></button>
@@ -29,11 +41,17 @@
   </nav>
 </header>
 <main class="main-container">
-  <section class="promo wrapper">
-    <h1 class="promo__title title title--extra">Функциональное питание для&nbsp;котов</h1>
-    <p class="promo__description">Занялся собой? Займись котом!</p>
-    <img class="promo__image" src="./img/promo/product.png" width="280" height="270" alt="Питание Cat Energy Pro.">
-    <a class="promo__link button button--main" href="form.html">Подобрать программу</a>
+  <section class="promo">
+    <div class="promo__wrapper wrapper">
+      <h1 class="promo__title title title--extra">Функциональное питание для&nbsp;котов</h1>
+      <p class="promo__description">Занялся собой? Займись котом!</p>
+      <picture>
+        <source media="(min-width: 1440px)" srcset="./img/promo/product-desktop.png 1x, ./img/promo/product-desktop@2x.png 2x" width="552" height="499">
+        <source media="(min-width: 768px)" srcset="./img/promo/product-tablet.jpg 1x, ./img/promo/product-tablet@2x.jpg 2x" width="709" height="609">
+        <img class="promo__image" src="./img/promo/product-mobile.png" srcset="./img/promo/product-mobile@2x.png 2x" width="280" height="270" alt="Питание Cat Energy Pro.">
+      </picture>
+      <a class="promo__link button button--main" href="form.html">Подобрать программу</a>
+    </div>
   </section>
   <section class="advantages wrapper">
     <h2 class="visually-hidden">Преимущества</h2>
@@ -73,7 +91,7 @@
     <div class="example__wrapper wrapper">
       <div class="example__body">
         <h2 class="example__title title title--main">Живой пример</h2>
-        <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+        <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без&nbsp;изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
         <div class="example__inner-wrapper">
           <div class="example__container">
             <span class="example__subject">5 КГ</span>
@@ -90,7 +108,10 @@
         </div>
       </div>
       <div class="compare-slider">
-        <img class="compare-slider__image" src="./img/compare-slider/compare-slider.png" width="280" height="256" alt="Кот до и после использования нашей продукции.">
+        <picture>
+          <source media="(min-width: 768px)" srcset="./img/compare-slider/cats-tablet.png 1x, ./img/compare-slider/cats-tablet@2x.png 2x" width="560" height="512">
+          <img class="compare-slider__image" src="./img/compare-slider/cats-mobile.png" srcset="./img/compare-slider/cats-mobile@2x.png 2x" width="280" height="256" alt="Кот до и после использования нашей продукции.">
+        </picture>
         <button class="compare-slider__button" type="button" aria-label="Сравнить изменения."></button>
       </div>
     </div>
@@ -111,7 +132,7 @@
 <footer class="page-footer">
   <div class="page-footer__wrapper wrapper">
     <a class="page-footer__logo" href="#">
-      <img src="./img/logos/text-logo-medium.svg" width="128" height="24" alt="Текстовый логотип Cat Energy.">
+      <img class="text-logo" src="./img/logos/text-logo.svg" width="128" height="24" alt="Текстовый логотип Cat Energy.">
     </a>
     <ul class="page-footer__socials socials">
       <li class="socials__item">

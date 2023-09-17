@@ -4,6 +4,10 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  @media (min-width: @desktop-width) {
+    gap: 66px;
+  }
 }
 
 .form__group-wrapper {
@@ -69,6 +73,24 @@
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
+  }
+
+  &--user {
+    @media (min-width: @desktop-width) {
+      margin-bottom: 73px;
+    }
+  }
+
+  &--textarea {
+    @media (min-width: @desktop-width) {
+      margin-bottom: 80px;
+    }
+  }
+
+  &--checkbox {
+    @media (min-width: @desktop-width) {
+      margin-bottom: 55px;
+    }
   }
 }
 
