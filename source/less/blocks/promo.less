@@ -3,11 +3,7 @@
 .promo {
   position: relative;
   z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 27px 20px 10px 20px;
-  background-image: url("../img/promo/promo-background.jpg");
+  background-image: url("../img/promo/promo-background-mobile.jpg");
   background-repeat: no-repeat;
   background-position: bottom 160px center;
   background-size: cover;
@@ -18,31 +14,45 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 65px 120px 526px;
-    align-items: flex-start;
     background-image: none;
   }
 
   @media (min-width: @desktop-width) {
     z-index: 0;
-    padding: 81px 190px 184px;
   }
 
   &::before {
     @media (min-width: @desktop-width) {
       content: "";
-      width: 720px;
-      height: 694px;
+      width: 50%;
+      height: calc(100% + 143px);
       position: absolute;
       right: 0;
       top: -143px;
       background-image: url("../img/promo/promo-background-desktop.jpg");
+      background-size: cover;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/promo/promo-background-desktop@2x.jpg");
-        background-size: 720px auto;
       }
     }
+  }
+}
+
+.promo__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 27px 20px 10px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 65px 120px 526px;
+    align-items: flex-start;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 81px 190px 184px;
   }
 }
 
