@@ -303,23 +303,39 @@
 </main>
 <footer class="page-footer">
   <div class="page-footer__wrapper wrapper">
-    <a class="page-footer__logo" href="#">
-      <img class="text-logo" src="./img/logos/text-logo.svg" width="128" height="24" alt="Текстовый логотип Cat Energy.">
+    <a class="page-footer__logo" href="index.html" aria-label="Перейти на главную страницу.">
+      <svg width="128" height="24" role="img">
+        <use href="./img/sprite.svg#text-logo-footer"></use>
+      </svg>
     </a>
     <ul class="page-footer__socials socials">
       <li class="socials__item">
-        <a class="socials__link socials__link--vkontakte" href="#" aria-label="Мы во вконтакте." target="_blank"></a>
+        <a class="socials__link" href="#" aria-label="Перейти на нашу страницу во вконтакте." target="_blank">
+          <svg width="28" height="22" aria-hidden="true" focusable="false">
+            <use href="./img/sprite.svg#icon-vkontakte"></use>
+          </svg>
+        </a>
       </li>
       <li class="socials__item">
-        <a class="socials__link socials__link--youtube" href="#" aria-label="Мы на ютубе." target="_blank"></a>
+        <a class="socials__link" href="#" aria-label="Перейти на нашу страницу на ютубе." target="_blank">
+          <svg width="28" height="22" aria-hidden="true" focusable="false">
+            <use href="./img/sprite.svg#icon-youtube"></use>
+          </svg>
+        </a>
       </li>
       <li class="socials__item">
-        <a class="socials__link socials__link--telegram" href="#" aria-label="Мы в телеграмме" target="_blank"></a>
+        <a class="socials__link" href="#" aria-label="Перейти на нашу страницу в телеграмме." target="_blank">
+          <svg width="28" height="22" aria-hidden="true" focusable="false">
+            <use href="./img/sprite.svg#icon-telegram"></use>
+          </svg>
+        </a>
       </li>
     </ul>
-    <a class="page-footer__htmlacademy" href="#" target="_blank">
-      HTML Academy
-      <img src="./img/logos/htmlacademy.svg" width="27" height="34" alt="Логотип htmlacademy.">
+    <a class="page-footer__htmlacademy" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" aria-label="Перейти на сайт htmlacademy.">
+      <span class="page-footer__htmlacademy-text">HTML Academy</span>
+      <svg width="27" height="34" role="img">
+        <use href="./img/sprite.svg#logo-htmlacademy"></use>
+      </svg>
     </a>
   </div>
 </footer>

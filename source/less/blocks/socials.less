@@ -1,29 +1,42 @@
 //СОЦИАЛЬНЫЕ СЕТИ
 
 .socials {
-  margin: 0;
-  list-style: none;
+  .list-reset();
   display: flex;
   gap: 24px;
   justify-content: center;
+  flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 40px;
+    max-width: 276px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 450px;
+  }
 }
 
 .socials__link {
   display: block;
   width: 28px;
   height: 22px;
-  background-repeat: no-repeat;
-  background-position: center;
 
-  &--vkontakte {
-    background-image: url("../img/icons/vkontakte.svg");
+  svg {
+    fill: @color-dark-grey-2;
+    transition: fill 0.3s ease;
   }
 
-  &--youtube {
-    background-image: url("../img/icons/youtube.svg");
+  &:hover,
+  &:focus-visible {
+    svg {
+      fill: @color-basic-green;
+    }
   }
 
-  &--telegram {
-    background-image: url("../img/icons/telegram.svg");
+  &:active {
+    svg {
+      fill: rgba(@color-basic-green, 0.3);
+    }
   }
 }
