@@ -43,10 +43,16 @@
   @media (min-width: @tablet-width) {
     position: relative;
     top: 0;
+    max-width: 450px;
     display: flex;
+    flex-wrap: wrap;
     gap: 33px;
     z-index: 1;
     background-color: transparent;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 600px;
   }
 }
 

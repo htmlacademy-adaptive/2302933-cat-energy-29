@@ -5,7 +5,7 @@
   z-index: 1;
   background-image: url("../img/promo/promo-background-mobile.jpg");
   background-repeat: no-repeat;
-  background-position: bottom 160px center;
+  background-position: bottom 188px center;
   background-size: cover;
   background-color: @color-white;
 
@@ -47,7 +47,7 @@
   padding: 27px 20px 10px 20px;
 
   @media (min-width: @tablet-width) {
-    padding: 65px 120px 526px;
+    padding: 40px 120px 526px;
     align-items: flex-start;
   }
 
@@ -81,11 +81,16 @@
     font-size: 20px;
     line-height: 20px;
     color: @color-black;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
     margin-bottom: 52px;
   }
 }
 
 .promo__image {
+  display: block;
   margin-bottom: 3px;
 
   @media (min-width: @tablet-width) {
