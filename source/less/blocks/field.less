@@ -1,6 +1,7 @@
 //ПОЛЕ ИНПУТА
 
 .field {
+  position: relative;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -63,17 +64,30 @@
     line-height: 30px;
   }
 
+  &:hover {
+    border-color: @color-special-grey;
+  }
+
+  &:focus {
+    outline: 1px solid @color-dark-grey;
+    border-color: @color-dark-grey;
+  }
+
+  &--has-error {
+    outline: 1px solid @color-error;
+    border-color: @color-error;
+    pointer-events: none;
+  }
+
+  &--has-error + .field__icon {
+    stroke: @color-error;
+  }
+
   &--has-icon {
     padding-right: 40px;
-    background-repeat: no-repeat;
-    background-position: top 12px right 11px;
 
-    &-email {
-      background-image: url("../img/icons/email.svg");
-    }
-
-    &-phone {
-      background-image: url("../img/icons/phone.svg");
+    &:focus + .field__icon {
+      stroke: @color-basic-green;
     }
   }
 
@@ -138,5 +152,21 @@
 
   &--radio {
     border-radius: 50%;
+  }
+}
+
+.field__icon {
+  stroke: @color-black;
+  position: absolute;
+  top: 12px;
+  right: 13px;
+
+  @media (min-width: @tablet-width) {
+    top: 16px;
+    right: 14px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 16px;
   }
 }
