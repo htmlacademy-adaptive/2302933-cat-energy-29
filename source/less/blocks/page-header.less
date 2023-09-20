@@ -2,12 +2,7 @@
 
 .page-header {
   background-color: @color-white;
-  padding: 13px 20px 14px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
+
 
   &--nojs {
     @media (max-width: @mobile-width-only) {
@@ -32,9 +27,19 @@
       border: none;
     }
   }
+}
+
+.page-header__wrapper {
+  padding: 13px 20px 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
 
   @media (min-width: @tablet-width) {
     padding: 25px 30px;
+    align-items: flex-start;
   }
 
   @media (min-width: @desktop-width) {
@@ -64,4 +69,10 @@
 
 .page-header__logo-image {
   display: block;
+}
+
+.page-header__navigation {
+  @media (min-width: @tablet-width) {
+    align-self: flex-end;
+  }
 }

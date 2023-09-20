@@ -7,19 +7,47 @@
   border: none;
   padding: 0;
   background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  &--default {
-    background-image: url("../img/icons/hamburger-menu.svg");
-  }
-
-  &--active {
-    background-image: url("../img/icons/cross.svg");
-  }
 
   @media (min-width: @tablet-width) {
     display: none;
+  }
+
+  svg {
+    stroke: @color-black;
+    transition: stroke 0.3s ease;
+  }
+
+  &:hover,
+  &:focus-visible {
+    svg {
+      stroke: @color-basic-green;
+    }
+  }
+
+  &:active {
+    svg {
+      stroke: rgba(@color-basic-green, 0.3);
+    }
+  }
+
+  &--default {
+    .main-navigation__toggle-hamburger {
+      display: block;
+    }
+
+    .main-navigation__toggle-cross {
+      display: none;
+    }
+  }
+
+  &--active {
+    .main-navigation__toggle-hamburger {
+      display: none;
+    }
+
+    .main-navigation__toggle-cross {
+      display: block;
+    }
   }
 }
 

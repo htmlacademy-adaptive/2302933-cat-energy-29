@@ -1,10 +1,17 @@
 //ГЛОБАЛЬНЫЕ СТИЛИ
 
+html {
+  height: 100%;
+}
+
 body {
+  min-height: 100%;
   margin: 0;
   font-family: @font-family-main;
   font-size: 14px;
   line-height: 18px;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
 }
 
 img {

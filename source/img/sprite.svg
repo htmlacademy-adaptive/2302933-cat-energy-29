@@ -31,4 +31,13 @@
       <path d="M94.6776 11.6154L90.8052 0.307692H93.1761L95.9421 8.76923L98.6291 0.307692H101L97.1276 11.6154V17.7692H94.7567V11.6154H94.6776Z"/>
     </g>
   </symbol>
+  <symbol viewBox="0 0 24 24" id="icon-hamburger-menu">
+    <line y1="3" x2="24" y2="3" stroke-width="2"/>
+    <line y1="11" x2="24" y2="11" stroke-width="2"/>
+    <line y1="19" x2="24" y2="19" stroke-width="2"/>
+  </symbol>
+  <symbol viewBox="0 0 20 20" id="icon-cross">
+    <line y1="-0.75" x2="24.7577" y2="-0.75" transform="matrix(0.686589 -0.727046 0.686589 0.727046 2.00171 20)" stroke-width="1.5"/>
+    <line y1="-0.75" x2="24.7577" y2="-0.75" transform="matrix(0.686589 0.727046 -0.686589 0.727046 1 2)" stroke-width="1.5"/>
+  </symbol>
 </svg>
