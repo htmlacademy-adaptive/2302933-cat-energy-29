@@ -3,17 +3,35 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 32px;
+
+  @media (min-width: @tablet-width) {
+    gap: 52px;
+  }
 
   @media (min-width: @desktop-width) {
-    gap: 66px;
+    gap: 60px;
+  }
+}
+
+.form__body {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+
+  @media (min-width: @tablet-width) {
+    gap: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    gap: 70px;
   }
 }
 
 .form__group-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 46px;
+  gap: 23px;
 
   @media (min-width: @tablet-width) {
     gap: 72px;
@@ -33,6 +51,10 @@
   flex-direction: column;
   gap: 14px;
 
+  @media (min-width: @tablet-width) {
+    gap: 20px;
+  }
+
   &--user {
     @media (min-width: @desktop-width) {
       display: grid;
@@ -42,23 +64,27 @@
   }
 
   &--radio {
-    padding: 22px 0 19px;
+    padding: 22px 0 18px;
 
     @media (min-width: @tablet-width) {
-      padding: 23px 27px 27px;
+      gap: 13px;
+      padding: 23px 27px 25px;
       border: 1px solid @color-extra-grey;
     }
   }
 
   &--checkbox {
+    gap: 13px;
+
     @media (min-width: @tablet-width) {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 32px 123px;
+      gap: 32px 60px;
     }
 
     @media (min-width: @desktop-width) {
       grid-template-columns: repeat(4, 1fr);
+      column-gap: 80px;
     }
   }
 }
@@ -71,25 +97,28 @@
   margin-bottom: 35px;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 76px;
     font-size: 36px;
     line-height: 36px;
   }
 
-  &--user {
-    @media (min-width: @desktop-width) {
-      margin-bottom: 73px;
-    }
-  }
-
   &--textarea {
+    margin-bottom: 36px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 87px;
+    }
+
     @media (min-width: @desktop-width) {
-      margin-bottom: 80px;
+      margin-bottom: 78px;
     }
   }
 
   &--checkbox {
-    @media (min-width: @desktop-width) {
-      margin-bottom: 55px;
+    margin-bottom: 31px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 57px;
     }
   }
 }
@@ -101,7 +130,7 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    gap: 64px;
+    gap: 60px;
   }
 
   @media (min-width: @desktop-width) {
@@ -125,5 +154,6 @@
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
+    max-width: 300px;
   }
 }

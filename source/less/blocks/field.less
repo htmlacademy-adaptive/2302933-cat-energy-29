@@ -15,6 +15,12 @@
     opacity: 0.3;
     cursor: not-allowed;
   }
+
+  &--extra {
+    @media (min-width: @tablet-width) {
+      gap: 20px;
+    }
+  }
 }
 
 .field__description {
@@ -22,11 +28,22 @@
   font-size: 16px;
   text-transform: uppercase;
   color: @color-dark-grey;
-  max-width: 300px;
+  max-width: 200px;
 
   @media (min-width: @tablet-width) {
+    max-width: 250px;
     font-size: 20px;
     line-height: 30px;
+  }
+
+  &--checkbox {
+    @media (min-width: @tablet-width) {
+      max-width: 200px;
+    }
+
+    @media (min-width: @desktop-width) {
+      max-width: 175px;
+    }
   }
 }
 
@@ -41,6 +58,7 @@
   color: @color-dark-grey;
 
   @media (min-width: @tablet-width) {
+    padding: 10px 19px;
     font-size: 20px;
     line-height: 30px;
   }
@@ -71,10 +89,12 @@
 }
 
 .field__textarea {
+  padding: 13px;
   resize: none;
   height: 150px;
 
   @media (min-width: @tablet-width) {
+    padding: 10px 20px;
     height: 175px;
   }
 }
