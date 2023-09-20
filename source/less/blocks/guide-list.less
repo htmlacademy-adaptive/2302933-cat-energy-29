@@ -10,13 +10,14 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 37px 153px;
+    gap: 37px 60px;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
-    gap: 79px;
+    gap: 78px;
     flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
@@ -33,10 +34,18 @@
     gap: 31px;
     align-items: flex-start;
 
+    &:first-child::before {
+      right: 100px;
+
+      @media (min-width: @desktop-width) {
+        right: 22px;
+      }
+    }
+
     &::before {
       position: absolute;
       top: 0;
-      right: 0;
+      right: 82px;
       z-index: -1;
       counter-increment: section;
       content: counters(section, "");
@@ -44,11 +53,16 @@
       font-size: 280px;
       line-height: 280px;
       color: @color-basic-grey;
+
+      @media (min-width: @desktop-width) {
+        right: 0;
+      }
     }
   }
 
   @media (min-width: @desktop-width) {
     max-width: 246px;
+    padding-right: 0;
   }
 }
 

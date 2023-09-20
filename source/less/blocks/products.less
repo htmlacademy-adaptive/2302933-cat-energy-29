@@ -1,7 +1,7 @@
 //СЕКЦИЯ ПРОДУКТОВ
 
 .products {
-  padding: 27px 20px;
+  padding: 25px 20px 24px;
   background-color: @color-white;
   border-bottom: 1px solid @color-special-grey-3;
 
@@ -16,7 +16,11 @@
 }
 
 .products__title {
-  margin-bottom: 41px;
+  margin-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 65px;
+  }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 84px;
@@ -30,7 +34,7 @@
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 41px 60px;
   }
 
   @media (min-width: @desktop-width) {

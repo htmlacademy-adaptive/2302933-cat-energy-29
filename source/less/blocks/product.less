@@ -11,20 +11,25 @@
       left: 0;
       bottom: 0;
       width: 100%;
-      height: calc(100% - 81px);
+      height: calc(100% - 100px);
       z-index: -1;
+
+      @media (min-width: @desktop-width) {
+        height: calc(100% - 81px);
+      }
     }
   }
 
   &--main {
-    padding: 20px 0 25px;
+    padding: 23px 0 24px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 17px 0;
+    gap: 20px 0;
 
     @media (min-width: @tablet-width) {
       padding: 29px 37px 40px 37px;
-      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
       gap: 0;
 
       &::before {
@@ -38,7 +43,7 @@
   }
 
   &--show-more {
-    padding: 78px 0 25px;
+    padding: 81px 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,13 +52,18 @@
     background-position: top 25px center;
 
     @media (min-width: @tablet-width) {
-      padding: 232px 20px 40px 20px;
+      padding: 261px 20px 40px 20px;
       background-size: 60px 60px;
-      background-position: top 132px center;
+      background-position: top 151px center;
 
       &::before {
         border: 2px solid @color-basic-grey;
       }
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 231px;
+      background-position: top 130px center;
     }
   }
 }
@@ -119,7 +129,7 @@
 
   &--show-more {
     line-height: 16px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 
     @media (min-width: @tablet-width) {
       max-width: 135px;
@@ -130,10 +140,12 @@
 }
 
 .product__details {
+  margin: 0;
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 7px;
   }
 
   @media (min-width: @desktop-width) {
@@ -142,9 +154,10 @@
 }
 
 .product__details-line {
-  display: flex;
-  justify-content: space-between;
-  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 10px;
   font-size: 12px;
   line-height: 16px;
   color: @color-dark-grey;
@@ -159,10 +172,12 @@
 
 .product__details-line dd {
   margin: 0;
+  justify-self: end;
 }
 
 .product__button {
   &--main {
+    margin-top: auto;
     grid-column: 1/-1;
   }
 
@@ -172,6 +187,10 @@
     @media (min-width: @tablet-width) {
       margin-top: auto;
       align-self: center;
+      min-width: 250px;
+    }
+
+    @media (min-width: @desktop-width) {
       min-width: 169px;
     }
   }
@@ -184,7 +203,6 @@
   margin-bottom: 21px;
 
   @media (min-width: @tablet-width) {
-    margin: 0;
     text-align: center;
     font-size: 16px;
     line-height: 18px;

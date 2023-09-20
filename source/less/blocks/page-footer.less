@@ -24,17 +24,35 @@
 
 .page-footer__logo {
   display: flex;
+
+  svg {
+    fill: #111111;
+    transition: fill 0.3s ease;
+  }
+
+  &:hover,
+  &:focus-visible {
+    svg {
+      fill: #3e3e3e;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: #6b6b6b;
+    }
+  }
 }
 
 .page-footer__socials {
   padding: 19px 0;
   align-self: stretch;
-  border-top: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;
+  border-top: 1px solid @color-special-grey-4;
+  border-bottom: 1px solid @color-special-grey-4;
 
   @media (min-width: @tablet-width) {
     border: none;
-    padding: 0;
+    padding: 0 0 0 40px;
     align-self: auto;
   }
 }
@@ -44,12 +62,46 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   font-size: 16px;
   line-height: 20px;
   color: @color-dark-grey;
+  transition: opacity 0.3s ease;
 
   @media (min-width: @tablet-width) {
     justify-content: normal;
     gap: 23px;
+  }
+
+  svg {
+    fill: @color-dark-grey-2;
+    transition: fill 0.3s ease;
+  }
+
+  &:hover,
+  &:focus-visible {
+    svg {
+      fill: @color-basic-green;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    svg {
+      fill: @color-basic-green;
+    }
+  }
+}
+
+.page-footer__htmlacademy-text {
+  max-width: 230px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 150px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 300px;
   }
 }

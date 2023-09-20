@@ -1,13 +1,13 @@
 //КАРТОЧКА ПРЕИМУЩЕСТВ
 
 .advantage-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 30px 33px 18px 20px;
   background-color: @color-basic-grey;
   background-repeat: no-repeat;
-  background-position: top 24px left 13px;
 
   @media (min-width: @tablet-width) {
     padding: 77px 316px 53px 52px;
@@ -18,8 +18,23 @@
     max-width: 570px;
   }
 
+  &::before {
+    content: "";
+    position: absolute;
+    right: 20px;
+    left: 20px;
+    height: 1px;
+    bottom: 57px;
+    background-color: @color-special-grey-4;
+
+    @media (min-width: @tablet-width) {
+      content: none;
+    }
+  }
+
   &--weight-lose {
     background-image: url("../img/advantages/cat.svg");
+    background-position: top 21px left 20px;
 
     @media (min-width: @tablet-width) {
       background-size: 200px 211px;
@@ -34,11 +49,12 @@
 
   &--weight-gain {
     background-image: url("../img/advantages/gepard.svg");
+    background-position: top 24px left 12px;
     background-size: 67px 50px;
 
     @media (min-width: @tablet-width) {
       background-size: 268px 200px;
-      background-position: top 91px right 29px;
+      background-position: top 91px right 33px;
     }
 
     @media (min-width: @desktop-width) {
@@ -78,6 +94,10 @@
     font-size: 16px;
     line-height: 24px;
     color: @color-black;
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: @desktop-width) {
     margin-bottom: 23px;
   }
 }
@@ -96,5 +116,6 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    margin-top: auto;
   }
 }
