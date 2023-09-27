@@ -2,6 +2,7 @@ import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import less from 'gulp-less';
 import postcss from 'gulp-postcss';
+import csso from 'postcss-csso';
 import htmlmin from 'gulp-htmlmin';
 import jsmin from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
@@ -15,7 +16,8 @@ export const styles = () => {
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(),
+      csso()
     ]))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
