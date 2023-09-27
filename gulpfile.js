@@ -48,6 +48,14 @@ export const optimizeImages = () => {
     .pipe(gulp.dest('build/img'))
 }
 
+// Create Webp
+
+export const createWebp = () => {
+  return gulp.src('source/img/**/*.{png,jpg}')
+    .pipe(squoosh({webp: {}}))
+    .pipe(gulp.dest('build/img'))
+}
+
 // Copy
 
 const copy = (done) => {
