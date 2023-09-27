@@ -4,6 +4,7 @@ import less from 'gulp-less';
 import postcss from 'gulp-postcss';
 import htmlmin from 'gulp-htmlmin';
 import jsmin from 'gulp-terser';
+import squoosh from 'gulp-libsquoosh';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 
@@ -34,6 +35,14 @@ export const js = () => {
   return gulp.src('source/js/script.js')
     .pipe(jsmin())
     .pipe(gulp.dest('build/js'))
+}
+
+// Minify images
+
+export const optimizeImages = () => {
+  return gulp.src('source/img/**/*.{png,jpg}')
+    .pipe(squoosh())
+    .pipe(gulp.dest('build/img'))
 }
 
 // Server
