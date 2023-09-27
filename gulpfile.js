@@ -3,6 +3,7 @@ import plumber from 'gulp-plumber';
 import less from 'gulp-less';
 import postcss from 'gulp-postcss';
 import htmlmin from 'gulp-htmlmin';
+import jsmin from 'gulp-terser';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 
@@ -23,8 +24,16 @@ export const styles = () => {
 
 export const html = () => {
   return gulp.src('source/*.html')
-    .pipe(htmlmin())
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'))
+}
+
+// Minify js
+
+export const js = () => {
+  return gulp.src('source/js/script.js')
+    .pipe(jsmin())
+    .pipe(gulp.dest('build/js'))
 }
 
 // Server
